@@ -1,15 +1,33 @@
 export const services = [
   {
-    title: "Projelendirme",
+    title: "Yangın Söndürme Cihazları",
     description:
-      "Yapınıza özel yangın güvenlik projeleri hazırlıyor, en uygun sistemleri tasarlıyoruz.",
-    image: "/services/projenlendirme.webp",
+      "Her türlü yangın sınıfına uygun söndürme tüpü ve cihazlarını temin ediyor, periyodik bakımını gerçekleştiriyoruz.",
+    image: "/services/yangin-tupu-imalati-500x371-500x371-400x225.jpeg",
   },
   {
-    title: "FM200 Yangın Söndürme Sistemleri",
+    title: "Yangın Söndürme Sistemleri",
     description:
-      "İnsan sağlığına zararsız, temiz ajan FM200 gazıyla hassas alanlarda etkili söndürme sağlıyoruz.",
-    image: "/services/fm-200-yangin-sondurme.jpeg",
+      "Yapınıza özel otomatik ve manuel yangın söndürme sistemleri tasarlıyor, kurulum ve bakımını yapıyoruz.",
+    image: "/services/proje-1.jpeg",
+  },
+  {
+    title: "Yangın Dolapları",
+    description:
+      "Standartlara uygun yangın dolabı sistemleri temin ediyor, montaj ve periyodik kontrollerini gerçekleştiriyoruz.",
+    image: "/services/acil-aydınlatma.jpeg",
+  },
+  {
+    title: "İtfaiye Malzemeleri",
+    description:
+      "Profesyonel itfaiye ekipman ve malzemelerini tedarik ediyor, bakım ve onarımını yapıyoruz.",
+    image: "/services/itfaiye-2.jpeg",
+  },
+  {
+    title: "İş Güvenliği",
+    description:
+      "İş yerlerinizde yasal mevzuata uygun iş güvenliği danışmanlığı ve eğitim hizmetleri sunuyoruz.",
+    image: "/services/is-guvenlik.png",
   },
   {
     title: "Davlumbaz Söndürme Sistemleri",
@@ -18,27 +36,33 @@ export const services = [
     image: "/davlumbaz.jpg",
   },
   {
-    title: "İtfaiye Ekipmanları",
+    title: "FM200 Söndürme Sistemleri",
     description:
-      "Profesyonel itfaiye malzemeleri ve ekipmanlarını tedarik ediyor, bakımını yapıyoruz.",
-    image: "/services/itfaiye-2.jpeg",
+      "İnsan sağlığına zararsız temiz ajan FM200 gazıyla hassas alanlarda hızlı ve etkili söndürme sağlıyoruz.",
+    image: "/services/fm-200-yangin-sondurme.jpeg",
   },
   {
-    title: "Acil Aydınlatma ve Yönlendirmeler",
+    title: "Karbondioksit Söndürme Sistemleri",
     description:
-      "Elektrik kesintilerinde güvenli tahliyeyi sağlayan acil aydınlatma ve kaçış yönlendirme sistemleri kuruyoruz.",
-    image: "/services/acil-aydınlatma.jpeg",
+      "Yüksek basınçlı CO₂ sistemleriyle elektrik odaları ve endüstriyel alanlarda kalıntısız söndürme yapıyoruz.",
+    image: "/services/fm-200-yangin-sondurme.jpeg",
   },
   {
-    title: "Yangın Söndürme Cihazları",
+    title: "Sulu Söndürme Sistemleri",
     description:
-      "Her türlü yangın sınıfına uygun söndürme tüpü ve cihazlarını temin ediyor, periyodik bakımını gerçekleştiriyoruz.",
+      "Sprinkler ve su sisi sistemleriyle binalarda otomatik yangın algılama ve söndürme çözümleri sunuyoruz.",
+    image: "/services/proje-1.jpeg",
+  },
+  {
+    title: "Tozlu Söndürme Sistemleri",
+    description:
+      "Kuru kimyasal toz sistemleriyle sanayi tesislerinde A, B ve C sınıfı yangınlara karşı etkin koruma sağlıyoruz.",
     image: "/services/yangin-tupu-imalati-500x371-500x371-400x225.jpeg",
   },
   {
-    title: "İş Güvenliği",
+    title: "Mikro Söndürme Sistemleri",
     description:
-      "İş yerlerinizde yasal mevzuata uygun iş güvenliği danışmanlığı ve eğitim hizmetleri sunuyoruz.",
-    image: "/services/is-guvenlik.png",
+      "Hassas ekipmanlar ve dar alanlar için kompakt mikro söndürme sistemleri tasarlıyor ve kuruyoruz.",
+    image: "/services/acil-aydınlatma.jpeg",
   },
 ];
