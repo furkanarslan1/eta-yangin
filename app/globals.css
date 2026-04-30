@@ -157,6 +157,16 @@
   animation: gradient-shift 5s ease infinite;
 }
 
+.animate-gradient-slow {
+  background-size: 300% 300%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.animate-gradient-fast {
+  background-size: 300% 300%;
+  animation: gradient-shift 3s ease infinite;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
