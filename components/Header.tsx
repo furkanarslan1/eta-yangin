@@ -20,7 +20,7 @@ export default function Header() {
     <div className="absolute top-0 left-0 z-20 flex w-full items-center justify-between md:justify-around px-6 h-16 text-white">
       {/* BRAND */}
       <Link href="/" className="flex items-center gap-2">
-        <Image src="/logo.png" alt="eta-yangin-logo" width={90} height={90} style={{ height: "auto" }} />
+        <Image src="/logo.png" alt="eta-yangin-logo" width={90} height={90} style={{ width: "auto", height: "auto" }} priority loading="eager" />
 
         <span className="text-xl md:text-2xl font-bold tracking-wide bg-linear-to-r from-red-400 via-red-300 to-red-400 bg-clip-text text-transparent animate-gradient">
           ETA YANGIN
