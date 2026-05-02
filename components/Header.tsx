@@ -8,21 +8,49 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { navigations } from "@/lib/constants/navigation";
-import { Mail, MapPin, Menu, Phone } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 10);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <div className="absolute top-0 left-0 z-20 flex w-full items-center justify-between md:justify-around px-6 h-16 text-white">
+    <div
+      className={`fixed top-0 left-0 z-20 flex w-full items-center justify-between md:justify-around px-6 h-16 text-white transition-colors duration-300 ${
+        scrolled ? "bg-red-700" : "bg-transparent"
+      }`}
+    >
       {/* BRAND */}
       <Link href="/" className="flex items-center gap-2">
-        <Image src="/logo.png" alt="eta-yangin-logo" width={90} height={90} style={{ width: "auto", height: "auto" }} priority loading="eager" />
+        <Image
+          src="/logo.png"
+          alt="eta-yangin-logo"
+          width={90}
+          height={90}
+          style={{ width: "auto", height: "auto" }}
+          priority
+          loading="eager"
+        />
 
-        <span className="text-xl md:text-2xl font-bold tracking-wide bg-linear-to-r from-red-400 via-red-300 to-red-400 bg-clip-text text-transparent animate-gradient">
+        <span
+          className={`text-xl md:text-2xl font-bold tracking-wide transition-colors duration-300 ${
+            scrolled
+              ? "text-white"
+              : "bg-linear-to-r from-red-400 via-red-300 to-red-400 bg-clip-text text-transparent animate-gradient"
+          }`}
+        >
           ETA YANGIN
         </span>
       </Link>
@@ -34,24 +62,32 @@ export default function Header() {
             key={nav.href}
             href={nav.href}
             className={`relative group text-white text-md font-medium tracking-wide pb-0.5 ${
-              pathname === nav.href ? "border-b-2 border-red-500" : ""
+              pathname === nav.href
+                ? `border-b-2 ${scrolled ? "border-white" : "border-red-600"}`
+                : ""
             }`}
           >
             {nav.name}
             {pathname !== nav.href && (
-              <span className="absolute left-1/2 bottom-0 h-0.5 w-0 bg-red-500 group-hover:w-full group-hover:left-0 transition-all duration-500" />
+              <span
+                className={`absolute left-1/2 bottom-0 h-0.5 w-0 group-hover:w-full group-hover:left-0 transition-all duration-500 ${scrolled ? "bg-white" : "bg-red-600"}`}
+              />
             )}
           </Link>
         ))}
       </div>
 
-      {/* Desktop: İletişim & Sosyal */}
-      <div className="hidden md:flex items-center gap-3 text-red-600 px-4 py-2 rounded-2xl bg-white ">
+      {/* Desktop: İletişim */}
+      <div
+        className={`hidden md:flex items-center gap-3 px-4 py-2 rounded-2xl transition-colors duration-300 ${
+          scrolled ? "bg-white text-red-600" : "bg-white text-red-600"
+        }`}
+      >
         <a
           href="tel:+905111111111"
           className="flex items-center gap-1.5 hover:text-red-900 transition-all duration-300 group"
         >
-          <Phone size={15} className="text-red-400 group-hover:text-red-900 " />
+          <Phone size={15} className="text-red-400 group-hover:text-red-900" />
           <span className="text-sm">Müşteri Hizmetleri</span>
         </a>
       </div>
