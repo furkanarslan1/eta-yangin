@@ -8,6 +8,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { navigations } from "@/lib/constants/navigation";
+import { products } from "@/lib/constants/products";
 import { Menu, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,15 +17,21 @@ import { useEffect, useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
+  const alwaysRed = products.some((p) => p.href === pathname);
+  const [scrolled, setScrolled] = useState(alwaysRed);
 
   useEffect(() => {
+    if (alwaysRed) {
+      setScrolled(true);
+      return;
+    }
     function onScroll() {
       setScrolled(window.scrollY > 10);
     }
+    setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [alwaysRed]);
 
   return (
     <div

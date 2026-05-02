@@ -31,11 +31,11 @@ export default async function KategoriPage({ params }: Props) {
     <main className="min-h-screen bg-white">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <Link
-          href="/"
+          href="/urunlerimiz"
           className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-red-500 transition-colors mb-10"
         >
           <ArrowLeft size={16} />
-          Anasayfaya Dön
+          Kategorilere Dön
         </Link>
 
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
