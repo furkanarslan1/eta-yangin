@@ -20,6 +20,7 @@ import References from "@/components/References";
 import Services from "@/components/Services";
 import Banner from "@/components/Banner";
 import Banner2 from "@/components/Banner2";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <Banner2 />
       <References />
       <Services />
+      <Contact />
     </div>
   );
 }

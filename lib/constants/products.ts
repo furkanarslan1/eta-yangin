@@ -14,7 +14,7 @@ export type ProductCategory = {
 export const products: ProductCategory[] = [
   {
     title: "Yangın Söndürme Cihazları",
-    href: "/yangin-sondurme-cihazlari",
+    href: "/yangin-sondurme-cihazlari/",
     image: "/services/yangin-tupu-imalati-500x371-500x371-400x225.webp",
     categoryImage: "/categories/yangin-cat.webp",
     items: [
@@ -89,14 +89,14 @@ export const products: ProductCategory[] = [
   },
   {
     title: "Yangın Söndürme Sistemleri",
-    href: "/yangin-sondurme-sistemleri",
+    href: "/yangin-sondurme-sistemleri/",
     image: "/services/proje-1.webp",
     categoryImage: "/categories/yangin-sondurme-sis.webp",
     items: [],
   },
   {
     title: "Yangın Dolapları ve Hidrantları",
-    href: "/yangin-dolaplari-ve-hidrantlari",
+    href: "/yangin-dolaplari-ve-hidrantlari/",
     image: "/services/acil-aydınlatma.webp",
     categoryImage: "/categories/yangin-dolaplari.webp",
     items: [
@@ -167,7 +167,7 @@ export const products: ProductCategory[] = [
   },
   {
     title: "Yangın Algılama ve İhbar Sistemleri",
-    href: "/yangin-algilama-ihbar-sistemleri",
+    href: "/yangin-algilama-ihbar-sistemleri/",
     image: "/services/fm-200-yangin-sondurme.webp",
     categoryImage: "/categories/yangin-algilama.webp",
     items: [
@@ -256,7 +256,7 @@ export const products: ProductCategory[] = [
   },
   {
     title: "İtfaiye Malzemeleri",
-    href: "/itfaiye-malzemeleri",
+    href: "/itfaiye-malzemeleri/",
     image: "/services/itfaiye-2.webp",
     categoryImage: "/categories/itfaiye-malzemeleri.webp",
     items: [
@@ -500,7 +500,7 @@ export const products: ProductCategory[] = [
   },
   {
     title: "Arama ve Kurtarma Malzemeleri",
-    href: "/arama-kurtarma-malzemeleri",
+    href: "/arama-kurtarma-malzemeleri/",
     image: "/itfaiye.webp",
     categoryImage: "/categories/arama-kurtarma.webp",
     items: [
@@ -677,7 +677,7 @@ export const products: ProductCategory[] = [
   },
   {
     title: "Yangın Kapısı ve Merdivenleri",
-    href: "/yangin-kapisi-ve-merdivenleri",
+    href: "/yangin-kapisi-ve-merdivenleri/",
     image: "/categories/yangin-merdivenleri.webp",
     categoryImage: "/categories/yangin-merdivenleri.webp",
     items: [
@@ -717,7 +717,7 @@ export const products: ProductCategory[] = [
   },
   {
     title: "Acil Aydınlatma ve Yönlendirme",
-    href: "/acil-aydinlatma-yonlendirme",
+    href: "/acil-aydinlatma-yonlendirme/",
     image: "/services/acil-aydınlatma.webp",
     categoryImage: "/categories/acil-aydinlatma.webp",
     items: [
@@ -741,7 +741,7 @@ export const products: ProductCategory[] = [
   },
   {
     title: "İş Güvenliği",
-    href: "/is-guvenligi",
+    href: "/is-guvenligi/",
     image: "/services/is-guvenlik.webp",
     categoryImage: "/categories/is-guvenligi.webp",
     items: [

@@ -6,37 +6,37 @@ const systems = [
     title: "FM200 Gazlı Söndürme",
     description:
       "Sunucu odaları, arşivler ve elektrik panoları için hasar bırakmayan hızlı gazlı söndürme sistemleri.",
-    href: "/yangin-sondurme-sistemleri",
+    href: "/yangin-sondurme-sistemleri/",
   },
   {
     title: "Sprinkler Sistemleri",
     description:
       "Otomatik algılama ve söndürme özelliğiyle binalarda sürekli aktif yangın koruma.",
-    href: "/yangin-sondurme-sistemleri",
+    href: "/yangin-sondurme-sistemleri/",
   },
   {
     title: "Yangın Algılama & İhbar",
     description:
       "Duman, ısı ve alev dedektörleri ile erken uyarı panelleri. Adresli ve konvansiyonel sistemler.",
-    href: "/yangin-algilama-ihbar-sistemleri",
+    href: "/yangin-algilama-ihbar-sistemleri/",
   },
   {
     title: "Davlumbaz Söndürme",
     description:
       "Mutfak ve endüstriyel davlumbazlar için özel tasarlanmış otomatik söndürme sistemleri.",
-    href: "/yangin-sondurme-sistemleri",
+    href: "/yangin-sondurme-sistemleri/",
   },
   {
     title: "Yangın Dolabı & Hidrant",
     description:
       "TS EN 671 standartlarında yangın dolapları, yeraltı ve yerüstü hidrant sistemleri.",
-    href: "/yangin-dolaplari-ve-hidrantlari",
+    href: "/yangin-dolaplari-ve-hidrantlari/",
   },
   {
     title: "Yangın Kapısı & Merdiven",
     description:
       "Yangına dayanıklı çelik kapılar ve kaçış merdivenleri ile yapısal pasif yangın güvenliği.",
-    href: "/yangin-kapisi-ve-merdivenleri",
+    href: "/yangin-kapisi-ve-merdivenleri/",
   },
 ];
 
@@ -91,6 +91,7 @@ export default function Banner2() {
                 width={1536}
                 height={1024}
                 className="w-full h-auto object-cover"
+                loading="eager"
                 fetchPriority="high"
               />
             </div>

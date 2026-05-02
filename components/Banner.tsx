@@ -32,7 +32,7 @@ export default function Banner() {
               Teklif Alın
             </a>
             <Link
-              href="/urunlerimiz"
+              href="/urunlerimiz/"
               className="inline-flex items-center gap-2 rounded-xl border border-white/20 hover:border-white/50 text-white font-semibold px-6 py-3 transition-colors duration-200"
             >
               Ürünleri İncele
