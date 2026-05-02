@@ -10,13 +10,13 @@ type Props = {
 
 export async function generateStaticParams() {
   return products.map((product) => ({
-    kategori: product.href.replace("/", ""),
+    kategori: product.href.replace(/^\/|\/$/g, ""),
   }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { kategori } = await params;
-  const product = products.find((p) => p.href === `/${kategori}`);
+  const product = products.find((p) => p.href === `/${kategori}/`);
   if (!product) return {};
 
   const BASE = "https://www.etayangin.com.tr";
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function KategoriPage({ params }: Props) {
   const { kategori } = await params;
-  const category = products.find((p) => p.href === `/${kategori}`);
+  const category = products.find((p) => p.href === `/${kategori}/`);
 
   if (!category) notFound();
 
