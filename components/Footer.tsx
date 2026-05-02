@@ -46,7 +46,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-2 mt-1">
             <Image
-              src="/iso.jpg"
+              src="/iso.webp"
               alt="ISO 9001:2015"
               width={56}
               height={56}

@@ -150,7 +150,7 @@ export default function HakkimizdaPage() {
             <div className="flex flex-col items-center gap-4">
               <div className="relative w-full max-w-sm rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
                 <Image
-                  src="/iso.jpg"
+                  src="/iso.webp"
                   alt="ISO 9001:2015 Sertifikası"
                   width={480}
                   height={640}

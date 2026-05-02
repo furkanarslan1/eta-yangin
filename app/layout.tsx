@@ -55,9 +55,9 @@ export const metadata: Metadata = {
       "Ankara'da FM200, davlumbaz söndürme, yangın tüpü, itfaiye malzemeleri ve iş güvenliği ekipmanları. ISO 9001:2015 belgeli hizmet.",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/og-image.png",
+        width: 1536,
+        height: 1024,
         alt: "ETA Yangın - Yangın Söndürme Sistemleri",
       },
     ],
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "ETA Yangın | Yangın Söndürme Sistemleri - Ankara",
     description:
       "Ankara'da FM200, davlumbaz söndürme, yangın tüpü, itfaiye malzemeleri ve iş güvenliği ekipmanları.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
   verification: {
     yandex: "3a0882b6d65a537c",
