@@ -63,7 +63,13 @@ export default function MobileNavbar() {
 
   return (
     <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:hidden w-88">
-      <div className="relative flex items-center justify-between h-16 px-5 rounded-full bg-linear-to-r from-red-700 via-red-600 to-red-700 backdrop-blur-xl border border-red-500/30 shadow-2xl shadow-red-900/40">
+      <div className="relative flex items-center justify-between h-16 px-5 rounded-full bg-gradient-to-br from-neutral-900 via-red-950/80 to-neutral-900 border border-red-800/30 shadow-2xl shadow-red-950/50">
+        {/* Blob'lar kendi overflow-hidden kutusunda */}
+        <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+          <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full bg-red-600/70 blur-2xl animate-blob-1" />
+          <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-red-900/80 blur-2xl animate-blob-2" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-red-700/60 blur-2xl animate-blob-3" />
+        </div>
         {/* Mail */}
         <NavBtn
           href="mailto:info@etayangin.com.tr"
@@ -181,7 +187,7 @@ export default function MobileNavbar() {
               style={{ backgroundColor: "#25D36640" }}
             />
             <Link
-              href="https://wa.me/903123953383"
+              href="https://wa.me/905448092050"
               target="_blank"
               rel="noopener noreferrer"
               className="relative z-10 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-xl border-2 border-white/20 hover:scale-105 transition-transform duration-200"

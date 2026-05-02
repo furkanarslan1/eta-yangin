@@ -24,7 +24,7 @@ export default function Banner() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <a
-              href="https://wa.me/903123953383"
+              href="https://wa.me/905448092050"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold px-6 py-3 transition-colors duration-200"
