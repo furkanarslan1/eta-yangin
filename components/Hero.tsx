@@ -105,7 +105,7 @@ export default function Hero() {
       </button>
 
       {/* Slide göstergeleri */}
-      <div className="absolute bottom-36 md:bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center gap-3">
+      <div className="absolute bottom-44 md:bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center gap-3">
         {heroSlides.map((_, index) => (
           <button
             key={index}

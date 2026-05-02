@@ -19,6 +19,7 @@ import ProductList from "@/components/ProductList";
 import References from "@/components/References";
 import Services from "@/components/Services";
 import Banner from "@/components/Banner";
+import Banner2 from "@/components/Banner2";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Hero />
       <Banner />
       <ProductList />
+      <Banner2 />
       <References />
       <Services />
     </div>

@@ -63,7 +63,7 @@ export default function MobileNavbar() {
 
   return (
     <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:hidden w-88">
-      <div className="relative flex items-center justify-between h-16 px-5 rounded-full bg-gradient-to-br from-neutral-900 via-red-950/80 to-neutral-900 border border-red-800/30 shadow-2xl shadow-red-950/50">
+      <div className="relative flex items-center justify-between h-16 px-5 rounded-full bg-linear-to-br from-neutral-900 via-red-950/80 to-neutral-900 border border-red-800/30 shadow-2xl shadow-red-950/50">
         {/* Blob'lar kendi overflow-hidden kutusunda */}
         <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
           <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full bg-red-600/70 blur-2xl animate-blob-1" />
