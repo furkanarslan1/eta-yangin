@@ -18,12 +18,13 @@ export const metadata: Metadata = {
 import ProductList from "@/components/ProductList";
 import References from "@/components/References";
 import Services from "@/components/Services";
-import Image from "next/image";
+import Banner from "@/components/Banner";
 
 export default function Home() {
   return (
     <div>
       <Hero />
+      <Banner />
       <ProductList />
       <References />
       <Services />

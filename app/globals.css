@@ -146,6 +146,12 @@
 .animate-blob-2 { animation: blob-move-2 11s ease-in-out infinite; }
 .animate-blob-3 { animation: blob-move-3 7s ease-in-out infinite; }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-16px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+
 @keyframes gradient-shift {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }

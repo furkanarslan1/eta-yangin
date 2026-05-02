@@ -32,9 +32,9 @@ export default function Footer() {
             <Image
               src="/logo.png"
               alt="ETA Yangın Logo"
-              width={44}
-              height={44}
-              style={{ width: "auto", height: "auto" }}
+              width={178}
+              height={125}
+              className="h-10 w-auto"
             />
             <span className="text-lg font-bold text-white tracking-wide">
               ETA YANGIN

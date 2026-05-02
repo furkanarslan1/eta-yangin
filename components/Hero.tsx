@@ -76,14 +76,14 @@ export default function Hero() {
       ))}
 
       {/* Siyah overlay */}
-      <div className="absolute inset-0 bg-black/80" />
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* İçerik */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
-        <h1 className="mb-4 max-w-3xl text-4xl font-bold leading-tight transition-all duration-700 md:text-6xl">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 pb-24 md:pb-0 text-center text-white">
+        <h1 className="mb-4 max-w-3xl text-2xl font-bold leading-tight transition-all duration-700 md:text-6xl">
           {slide.title}
         </h1>
-        <p className="max-w-xl text-lg text-gray-200 transition-all duration-700 md:text-xl">
+        <p className="max-w-xl text-sm text-gray-200 transition-all duration-700 md:text-xl">
           {slide.description}
         </p>
       </div>
@@ -105,7 +105,7 @@ export default function Hero() {
       </button>
 
       {/* Slide göstergeleri */}
-      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center gap-3">
+      <div className="absolute bottom-28 md:bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center gap-3">
         {heroSlides.map((_, index) => (
           <button
             key={index}
