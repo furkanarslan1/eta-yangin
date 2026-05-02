@@ -4,7 +4,16 @@ import { ArrowLeft, CheckCircle2, ShieldCheck } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hakkımızda | ETA Yangın",
+  title: "Hakkımızda",
+  description:
+    "ETA Yangın hakkında — ISO 9001:2015 belgeli şirketimiz, müşteri memnuniyeti odaklı yangın güvenliği çözümleri sunar. Ankara merkezli uzman ekibimizle güvenilir, planlı ve zamanında hizmet veriyoruz.",
+  alternates: { canonical: "https://www.etayangin.com.tr/hakkimizda/" },
+  openGraph: {
+    url: "https://www.etayangin.com.tr/hakkimizda/",
+    title: "Hakkımızda | ETA Yangın",
+    description:
+      "ISO 9001:2015 belgeli ETA Yangın, müşteri memnuniyeti odaklı yangın güvenliği çözümleri sunan Ankara merkezli profesyonel bir firmadır.",
+  },
 };
 
 const commitments = [

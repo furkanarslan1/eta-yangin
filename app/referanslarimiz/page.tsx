@@ -4,7 +4,16 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Referanslarımız | ETA Yangın",
+  title: "Referanslarımız",
+  description:
+    "ETA Yangın referansları — Onlarca kurum, kuruluş ve sanayi tesisine yangın güvenliği hizmeti verdik. Güven duyulan müşteri portföyümüzü keşfedin.",
+  alternates: { canonical: "https://www.etayangin.com.tr/referanslarimiz/" },
+  openGraph: {
+    url: "https://www.etayangin.com.tr/referanslarimiz/",
+    title: "Referanslarımız | ETA Yangın",
+    description:
+      "Onlarca kurum ve kuruluşa yangın güvenliği hizmeti veren ETA Yangın'ın güven duyulan müşteri portföyü.",
+  },
 };
 
 const references = Array.from({ length: 49 }, (_, i) => i + 1);

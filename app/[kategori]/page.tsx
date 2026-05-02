@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { products } from "@/lib/constants/products";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { ImageWithSkeleton } from "@/components/ui/image-skeleton";
 
 type Props = {
   params: Promise<{ kategori: string }>;
@@ -18,7 +18,29 @@ export async function generateMetadata({ params }: Props) {
   const { kategori } = await params;
   const product = products.find((p) => p.href === `/${kategori}`);
   if (!product) return {};
-  return { title: `${product.title} | ETA Yangın` };
+
+  const BASE = "https://www.etayangin.com.tr";
+  const url = `${BASE}${product.href}/`;
+  const itemCount = product.items.length;
+  const description = `ETA Yangın ${product.title} ürünleri — ${
+    itemCount > 0
+      ? `${itemCount} farklı ürün seçeneği ile`
+      : "Profesyonel yangın güvenliği çözümleriyle"
+  } Ankara'da hizmetinizdeyiz. Teklif almak için hemen iletişime geçin.`;
+
+  return {
+    title: product.title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      url,
+      title: `${product.title} | ETA Yangın`,
+      description,
+      images: product.categoryImage
+        ? [{ url: product.categoryImage, alt: product.title }]
+        : undefined,
+    },
+  };
 }
 
 export default async function KategoriPage({ params }: Props) {
@@ -53,15 +75,14 @@ export default async function KategoriPage({ params }: Props) {
                 key={`${item.title}-${index}`}
                 className="group flex flex-col rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="relative h-52 w-full overflow-hidden bg-gray-50">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
+                <ImageWithSkeleton
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  containerClassName="relative h-52 w-full bg-gray-50"
+                />
 
                 <div className="flex flex-col flex-1 p-4 gap-4">
                   <p className="text-sm font-semibold text-gray-800 leading-snug flex-1">

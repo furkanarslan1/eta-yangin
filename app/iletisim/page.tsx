@@ -3,7 +3,16 @@ import { ArrowLeft, Mail, MapPin, Phone } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "İletişim | ETA Yangın",
+  title: "İletişim",
+  description:
+    "ETA Yangın iletişim bilgileri — Ankara İvedik OSB Mah. 1443. Cad. No: 9, Yenimahalle. Tel: +90 312 395 3383. Yangın güvenliği ürün ve hizmetleri için hemen iletişime geçin.",
+  alternates: { canonical: "https://www.etayangin.com.tr/iletisim/" },
+  openGraph: {
+    url: "https://www.etayangin.com.tr/iletisim/",
+    title: "İletişim | ETA Yangın",
+    description:
+      "Ankara İvedik OSB'de hizmet veren ETA Yangın'a ulaşın. Tel: +90 312 395 3383 | info@etayangin.com.tr",
+  },
 };
 
 const contactItems = [

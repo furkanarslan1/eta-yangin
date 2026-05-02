@@ -1,10 +1,20 @@
+import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/lib/constants/products";
 
-export const metadata = {
-  title: "Ürünlerimiz | ETA Yangın",
+export const metadata: Metadata = {
+  title: "Ürünlerimiz",
+  description:
+    "ETA Yangın ürün kategorileri — FM200 gazlı sistemler, yangın tüpleri, dolaplar ve hidrantlar, itfaiye malzemeleri, yangın algılama sistemleri, iş güvenliği ekipmanları ve daha fazlası.",
+  alternates: { canonical: "https://www.etayangin.com.tr/urunlerimiz/" },
+  openGraph: {
+    url: "https://www.etayangin.com.tr/urunlerimiz/",
+    title: "Ürünlerimiz | ETA Yangın",
+    description:
+      "FM200 gazlı sistemler, yangın tüpleri, itfaiye malzemeleri ve iş güvenliği ekipmanları dahil tüm ürün kategorileri.",
+  },
 };
 
 export default function UrunlerimizPage() {
