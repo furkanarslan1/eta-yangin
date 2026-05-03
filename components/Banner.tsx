@@ -10,7 +10,7 @@ export default function Banner() {
         {/* Metin */}
         <div className="flex-1 text-center md:text-left">
           <p className="text-red-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Ankara&apos;nın Güvenilir Yangın Güvenliği Firması
+            Türkiye&apos;nin Güvenilir Yangın Güvenliği Firması
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
             Yangın Söndürme <br className="hidden md:block" />

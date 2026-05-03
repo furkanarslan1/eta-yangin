@@ -7,8 +7,10 @@ import { heroSlides } from "@/lib/constants/hero";
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
+  const [previous, setPrevious] = useState<number | null>(null);
   const touchStartX = useRef<number | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const transitionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const startTimer = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -31,11 +33,18 @@ export default function Hero() {
     return () => {
       cancelScheduledStart();
       if (timerRef.current) clearInterval(timerRef.current);
+      if (transitionTimerRef.current) clearTimeout(transitionTimerRef.current);
     };
   }, [startTimer]);
 
   function goTo(index: number) {
+    if (index === current) return;
+    if (transitionTimerRef.current) clearTimeout(transitionTimerRef.current);
+    setPrevious(current);
     setCurrent(index);
+    transitionTimerRef.current = setTimeout(() => {
+      setPrevious(null);
+    }, 900);
     startTimer();
   }
 
@@ -64,6 +73,7 @@ export default function Hero() {
   }
 
   const slide = heroSlides[current];
+  const previousSlide = previous === null ? null : heroSlides[previous];
 
   return (
     <section
@@ -72,13 +82,24 @@ export default function Hero() {
       onTouchEnd={handleTouchEnd}
     >
       <div className="absolute inset-0">
+        {previousSlide && (
+          <Image
+            key={`previous-${previousSlide.image}`}
+            src={previousSlide.image}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover animate-hero-media-exit"
+            aria-hidden="true"
+          />
+        )}
         <Image
-          key={slide.image}
+          key={`current-${slide.image}`}
           src={slide.image}
           alt={slide.alt}
           fill
           sizes="100vw"
-          className="object-cover"
+          className="object-cover animate-hero-media"
           loading={current === 0 ? "eager" : "lazy"}
           fetchPriority={current === 0 ? "high" : "auto"}
         />
@@ -89,10 +110,10 @@ export default function Hero() {
 
       {/* İçerik */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 pb-24 md:pb-0 text-center text-white">
-        <h1 className="mb-4 max-w-3xl text-2xl font-bold leading-tight transition-all duration-700 md:text-6xl">
+        <h1 className="mb-4 max-w-3xl text-2xl font-bold leading-tight transition-all duration-700 md:text-6xl animate-hero-title">
           {slide.title}
         </h1>
-        <p className="max-w-xl text-sm text-gray-200 transition-all duration-700 md:text-xl">
+        <p className="max-w-xl text-sm text-gray-200 transition-all duration-700 md:text-xl animate-hero-description">
           {slide.description}
         </p>
       </div>
