@@ -86,13 +86,12 @@ export default function Banner2() {
             <div className="absolute -bottom-5 -left-5 w-4/5 h-4/5 bg-red-600 rounded-2xl" />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/og-image.png"
+                src="/optimized/banners/og-image-900.webp"
                 alt="ETA Yangın - Ankara yangın söndürme sistemleri ve güvenlik ekipmanları"
-                width={1536}
-                height={1024}
+                width={900}
+                height={600}
                 className="w-full h-auto object-cover"
-                loading="eager"
-                fetchPriority="high"
+                loading="lazy"
               />
             </div>
           </div>

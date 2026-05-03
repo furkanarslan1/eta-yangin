@@ -45,7 +45,11 @@ export default function Hero() {
     if (touchStartX.current === null) return;
     const diff = touchStartX.current - e.changedTouches[0].clientX;
     if (Math.abs(diff) < 50) return;
-    diff > 0 ? goNext() : goPrev();
+    if (diff > 0) {
+      goNext();
+    } else {
+      goPrev();
+    }
     touchStartX.current = null;
   }
 
@@ -57,23 +61,18 @@ export default function Hero() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {heroSlides.map((s, index) => (
-        <div
-          key={s.image}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === current ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <Image
-            src={s.image}
-            alt={s.alt}
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority={index === 0}
-          />
-        </div>
-      ))}
+      <div className="absolute inset-0">
+        <Image
+          key={slide.image}
+          src={slide.image}
+          alt={slide.alt}
+          fill
+          sizes="100vw"
+          className="object-cover"
+          loading={current === 0 ? "eager" : "lazy"}
+          fetchPriority={current === 0 ? "high" : "auto"}
+        />
+      </div>
 
       {/* Siyah overlay */}
       <div className="absolute inset-0 bg-black/50" />

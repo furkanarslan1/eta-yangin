@@ -8,7 +8,12 @@ type Props = Omit<ImageProps, "placeholder" | "onLoad"> & {
   containerClassName?: string;
 };
 
-export function ImageWithSkeleton({ containerClassName, className, ...props }: Props) {
+export function ImageWithSkeleton({
+  alt,
+  containerClassName,
+  className,
+  ...props
+}: Props) {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -18,6 +23,7 @@ export function ImageWithSkeleton({ containerClassName, className, ...props }: P
       )}
       <Image
         {...props}
+        alt={alt}
         className={cn(
           "transition-opacity duration-500",
           loaded ? "opacity-100" : "opacity-0",

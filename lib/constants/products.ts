@@ -16,7 +16,7 @@ export const products: ProductCategory[] = [
     title: "Yangın Söndürme Cihazları",
     href: "/yangin-sondurme-cihazlari/",
     image: "/services/yangin-tupu-imalati-500x371-500x371-400x225.webp",
-    categoryImage: "/categories/yangin-cat.webp",
+    categoryImage: "/optimized/categories/yangin-cat.webp",
     items: [
       {
         title: "Halokarbon Gazlı Yangın Söndürme Cihazları",
@@ -91,14 +91,14 @@ export const products: ProductCategory[] = [
     title: "Yangın Söndürme Sistemleri",
     href: "/yangin-sondurme-sistemleri/",
     image: "/services/proje-1.webp",
-    categoryImage: "/categories/yangin-sondurme-sis.webp",
+    categoryImage: "/optimized/categories/yangin-sondurme-sis.webp",
     items: [],
   },
   {
     title: "Yangın Dolapları ve Hidrantları",
     href: "/yangin-dolaplari-ve-hidrantlari/",
     image: "/services/acil-aydınlatma.webp",
-    categoryImage: "/categories/yangin-dolaplari.webp",
+    categoryImage: "/optimized/categories/yangin-dolaplari.webp",
     items: [
       {
         title: "Mobil Köpük Ünitesi - 500 Litre",
@@ -169,7 +169,7 @@ export const products: ProductCategory[] = [
     title: "Yangın Algılama ve İhbar Sistemleri",
     href: "/yangin-algilama-ihbar-sistemleri/",
     image: "/services/fm-200-yangin-sondurme.webp",
-    categoryImage: "/categories/yangin-algilama.webp",
+    categoryImage: "/optimized/categories/yangin-algilama.webp",
     items: [
       {
         title: "S1 Motorlu Siren",
@@ -258,7 +258,7 @@ export const products: ProductCategory[] = [
     title: "İtfaiye Malzemeleri",
     href: "/itfaiye-malzemeleri/",
     image: "/services/itfaiye-2.webp",
-    categoryImage: "/categories/itfaiye-malzemeleri.webp",
+    categoryImage: "/optimized/categories/itfaiye-malzemeleri.webp",
     items: [
       {
         title: "Temiz Hava Soluma Cihazı Doldurma",
@@ -502,7 +502,7 @@ export const products: ProductCategory[] = [
     title: "Arama ve Kurtarma Malzemeleri",
     href: "/arama-kurtarma-malzemeleri/",
     image: "/itfaiye.webp",
-    categoryImage: "/categories/arama-kurtarma.webp",
+    categoryImage: "/optimized/categories/arama-kurtarma.webp",
     items: [
       {
         title: "Elektrikli Kırıcı ve Delici 11kg",
@@ -679,7 +679,7 @@ export const products: ProductCategory[] = [
     title: "Yangın Kapısı ve Merdivenleri",
     href: "/yangin-kapisi-ve-merdivenleri/",
     image: "/categories/yangin-merdivenleri.webp",
-    categoryImage: "/categories/yangin-merdivenleri.webp",
+    categoryImage: "/optimized/categories/yangin-merdivenleri.webp",
     items: [
       {
         title: "Yangın Kapısı Tek",
@@ -719,7 +719,7 @@ export const products: ProductCategory[] = [
     title: "Acil Aydınlatma ve Yönlendirme",
     href: "/acil-aydinlatma-yonlendirme/",
     image: "/services/acil-aydınlatma.webp",
-    categoryImage: "/categories/acil-aydinlatma.webp",
+    categoryImage: "/optimized/categories/acil-aydinlatma.webp",
     items: [
       {
         title: "Acil Çıkış",
@@ -743,7 +743,7 @@ export const products: ProductCategory[] = [
     title: "İş Güvenliği",
     href: "/is-guvenligi/",
     image: "/services/is-guvenlik.webp",
-    categoryImage: "/categories/is-guvenligi.webp",
+    categoryImage: "/optimized/categories/is-guvenligi.webp",
     items: [
       {
         title: "Kişisel Güvenlik Levhaları 1043-1064",

@@ -1,6 +1,6 @@
 "use client";
 import { navigations } from "@/lib/constants/navigation";
-import { products } from "@/lib/constants/products";
+import { productCategoryHrefs } from "@/lib/constants/product-routes";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,21 +9,20 @@ import { useEffect, useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
-  const alwaysRed = products.some((p) => p.href === pathname);
-  const [scrolled, setScrolled] = useState(alwaysRed);
+  const alwaysRed = productCategoryHrefs.includes(
+    pathname as (typeof productCategoryHrefs)[number]
+  );
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const scrolled = alwaysRed || hasScrolled;
 
   useEffect(() => {
-    if (alwaysRed) {
-      setScrolled(true);
-      return;
-    }
     function onScroll() {
-      setScrolled(window.scrollY > 10);
+      setHasScrolled(window.scrollY > 10);
     }
-    setScrolled(window.scrollY > 10);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [alwaysRed]);
+  }, []);
 
   return (
     <div
@@ -46,7 +45,7 @@ export default function Header() {
           className={`text-xl md:text-2xl font-bold tracking-wide transition-colors duration-300 ${
             scrolled
               ? "text-white"
-              : "bg-linear-to-r from-red-400 via-red-300 to-red-400 bg-clip-text text-transparent animate-gradient"
+              : "bg-linear-to-r from-red-400 via-red-300 to-red-400 bg-clip-text text-transparent"
           }`}
         >
           ETA YANGIN

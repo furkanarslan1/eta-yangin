@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileNavbar from "@/components/MobilNavbar";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const BASE_URL = "https://www.etayangin.com.tr";
 const GA_ID = "G-5LHF2CLBCV";
@@ -55,9 +49,9 @@ export const metadata: Metadata = {
       "Ankara'da FM200, davlumbaz söndürme, yangın tüpü, itfaiye malzemeleri ve iş güvenliği ekipmanları. ISO 9001:2015 belgeli hizmet.",
     images: [
       {
-        url: "/og-image.png",
-        width: 1536,
-        height: 1024,
+        url: "/optimized/og-image.webp",
+        width: 1200,
+        height: 630,
         alt: "ETA Yangın - Yangın Söndürme Sistemleri",
       },
     ],
@@ -67,7 +61,7 @@ export const metadata: Metadata = {
     title: "ETA Yangın | Yangın Söndürme Sistemleri - Ankara",
     description:
       "Ankara'da FM200, davlumbaz söndürme, yangın tüpü, itfaiye malzemeleri ve iş güvenliği ekipmanları.",
-    images: ["/og-image.png"],
+    images: ["/optimized/og-image.webp"],
   },
   verification: {
     yandex: "3a0882b6d65a537c",
@@ -145,10 +139,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="tr"
-      className={`${geistSans.variable} h-full antialiased`}
-    >
+    <html lang="tr" className="h-full antialiased">
       <head>
         <script
           type="application/ld+json"
