@@ -18,8 +18,18 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
-    startTimer();
+    let cancelScheduledStart: () => void;
+
+    if (window.requestIdleCallback && window.cancelIdleCallback) {
+      const idleId = window.requestIdleCallback(startTimer, { timeout: 3000 });
+      cancelScheduledStart = () => window.cancelIdleCallback(idleId);
+    } else {
+      const timeoutId = window.setTimeout(startTimer, 2500);
+      cancelScheduledStart = () => window.clearTimeout(timeoutId);
+    }
+
     return () => {
+      cancelScheduledStart();
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [startTimer]);

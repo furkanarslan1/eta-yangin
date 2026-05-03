@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { products } from "@/lib/constants/products";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { ImageWithSkeleton } from "@/components/ui/image-skeleton";
+import Image from "next/image";
 
 type Props = {
   params: Promise<{ kategori: string }>;
@@ -75,14 +75,15 @@ export default async function KategoriPage({ params }: Props) {
                 key={`${item.title}-${index}`}
                 className="group flex flex-col rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                <ImageWithSkeleton
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  containerClassName="relative h-52 w-full bg-gray-50"
-                />
+                <div className="relative h-52 w-full bg-gray-50">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
 
                 <div className="flex flex-col flex-1 p-4 gap-4">
                   <p className="text-sm font-semibold text-gray-800 leading-snug flex-1">

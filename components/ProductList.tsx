@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { ImageWithSkeleton } from "@/components/ui/image-skeleton";
 import { products } from "@/lib/constants/products";
 
 export default function ProductList() {
@@ -27,13 +27,12 @@ export default function ProductList() {
               {/* Resim alanı */}
               <div className="relative h-44 w-full overflow-hidden bg-neutral-800">
                 {product.categoryImage ? (
-                  <ImageWithSkeleton
+                  <Image
                     src={product.categoryImage}
                     alt={product.title}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    containerClassName="absolute inset-0"
                   />
                 ) : (
                   <div className="flex h-full items-center justify-center">

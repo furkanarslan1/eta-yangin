@@ -1,17 +1,10 @@
 "use client";
 
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import { navigations } from "@/lib/constants/navigation";
 import { Mail, MapPin, Menu, Phone } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 function WhatsAppIcon() {
   return (
@@ -60,107 +53,138 @@ function NavBtn({
 
 export default function MobileNavbar() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:hidden w-88">
-      <div className="relative flex items-center justify-between h-16 px-5 rounded-full bg-linear-to-br from-neutral-900 via-red-950/80 to-neutral-900 border border-red-800/30 shadow-2xl shadow-red-950/50">
-        {/* Blob'lar kendi overflow-hidden kutusunda */}
-        <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
-          <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full bg-red-600/70 blur-2xl animate-blob-1" />
-          <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-red-900/80 blur-2xl animate-blob-2" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-red-700/60 blur-2xl animate-blob-3" />
+    <>
+      <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:hidden w-88">
+        <div className="relative flex items-center justify-between h-16 px-5 rounded-full bg-linear-to-br from-neutral-900 via-red-950/80 to-neutral-900 border border-red-800/30 shadow-2xl shadow-red-950/50">
+          {/* Blob'lar kendi overflow-hidden kutusunda */}
+          <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+            <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full bg-red-600/70 blur-2xl animate-blob-1" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-red-900/80 blur-2xl animate-blob-2" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-red-700/60 blur-2xl animate-blob-3" />
+          </div>
+          {/* Mail */}
+          <NavBtn
+            href="mailto:info@etayangin.com.tr"
+            label="Mail"
+            hoverColor="group-hover:bg-blue-500/20 group-hover:border-blue-400/40"
+            iconColor="group-hover:text-blue-300"
+          >
+            <Mail size={16} />
+          </NavBtn>
+
+          {/* Konum */}
+          <NavBtn
+            href="https://maps.google.com/?q=ETA+Yangın+Ankara"
+            label="Konum"
+            external
+            hoverColor="group-hover:bg-orange-500/20 group-hover:border-orange-400/40"
+            iconColor="group-hover:text-orange-300"
+          >
+            <MapPin size={16} />
+          </NavBtn>
+
+          {/* Orta boşluk */}
+          <div className="w-14" />
+
+          {/* Telefon */}
+          <NavBtn
+            href="tel:+903123953383"
+            label="Ara"
+            hoverColor="group-hover:bg-red-500/20 group-hover:border-red-400/40"
+            iconColor="group-hover:text-red-300"
+          >
+            <Phone size={16} />
+          </NavBtn>
+
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            onClick={() => setOpen((value) => !value)}
+            className="flex flex-col items-center gap-0.5 group"
+          >
+            <div className="flex items-center justify-center w-9 h-9 rounded-full bg-white/5 border border-white/10 transition-all duration-200 group-hover:bg-white/15 group-hover:border-white/30">
+              <Menu size={16} className="text-white" />
+            </div>
+            <span className="text-[9px] text-white/60">Menü</span>
+          </button>
+
+          {/* Orta: WhatsApp yükseltilmiş */}
+          <div className="absolute left-1/2 -translate-x-1/2 -top-6">
+            <div className="relative w-14 h-14">
+              <span
+                className="absolute inset-0 rounded-full animate-ping"
+                style={{ backgroundColor: "#25D36640" }}
+              />
+              <Link
+                href="https://wa.me/905448092050"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative z-10 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-xl border-2 border-white/20 hover:scale-105 transition-transform duration-200"
+                style={{ backgroundColor: "#25D366" }}
+              >
+                <WhatsAppIcon />
+              </Link>
+            </div>
+          </div>
         </div>
-        {/* Mail */}
-        <NavBtn
-          href="mailto:info@etayangin.com.tr"
-          label="Mail"
-          hoverColor="group-hover:bg-blue-500/20 group-hover:border-blue-400/40"
-          iconColor="group-hover:text-blue-300"
-        >
-          <Mail size={16} />
-        </NavBtn>
+      </nav>
 
-        {/* Konum */}
-        <NavBtn
-          href="https://maps.google.com/?q=ETA+Yangın+Ankara"
-          label="Konum"
-          external
-          hoverColor="group-hover:bg-orange-500/20 group-hover:border-orange-400/40"
-          iconColor="group-hover:text-orange-300"
-        >
-          <MapPin size={16} />
-        </NavBtn>
-
-        {/* Orta boşluk */}
-        <div className="w-14" />
-
-        {/* Telefon */}
-        <NavBtn
-          href="tel:+903123953383"
-          label="Ara"
-          hoverColor="group-hover:bg-red-500/20 group-hover:border-red-400/40"
-          iconColor="group-hover:text-red-300"
-        >
-          <Phone size={16} />
-        </NavBtn>
-
-        {/* Menü (Sheet) */}
-        <Sheet>
-          <SheetTrigger asChild>
-            <button className="flex flex-col items-center gap-0.5 group">
-              <div className="flex items-center justify-center w-9 h-9 rounded-full bg-white/5 border border-white/10 transition-all duration-200 group-hover:bg-white/15 group-hover:border-white/30">
-                <Menu size={16} className="text-white" />
-              </div>
-              <span className="text-[9px] text-white/60">Menü</span>
-            </button>
-          </SheetTrigger>
-
-          <SheetContent
-            side="right"
-            showCloseButton={false}
-            aria-describedby={undefined}
-            className="w-72 p-0 bg-neutral-900 border-white/10 flex flex-col overflow-hidden"
+      {open && (
+        <>
+          <button
+            type="button"
+            aria-label="Menüyü kapat"
+            className="fixed inset-0 z-40 bg-black/10"
+            onClick={() => setOpen(false)}
+          />
+          <aside
+            id="mobile-menu"
+            className="fixed inset-y-0 right-0 z-50 flex w-72 flex-col overflow-hidden border-l border-white/10 bg-neutral-900 text-sm shadow-lg"
           >
             <div className="absolute top-0 left-0 w-48 h-48 rounded-full bg-red-800/40 blur-3xl animate-blob-1 pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-56 h-56 rounded-full bg-red-900/35 blur-3xl animate-blob-2 pointer-events-none" />
 
-            <SheetHeader className="relative z-10 px-6 pt-6 pb-4 border-b border-white/10">
+            <div className="relative z-10 px-6 pt-6 pb-4 border-b border-white/10">
               <div className="flex items-center justify-between">
-                <SheetTitle className="font-bold tracking-wide text-base text-white">
+                <p className="font-bold tracking-wide text-base text-white">
                   ETA Yangın
-                </SheetTitle>
-                <SheetClose asChild>
-                  <button
-                    aria-label="Kapat"
-                    className="text-white/60 hover:text-white transition-colors w-8 h-8 flex items-center justify-center rounded-md hover:bg-white/10"
-                  >
-                    ✕
-                  </button>
-                </SheetClose>
+                </p>
+                <button
+                  type="button"
+                  aria-label="Kapat"
+                  onClick={() => setOpen(false)}
+                  className="text-white/60 hover:text-white transition-colors w-8 h-8 flex items-center justify-center rounded-md hover:bg-white/10"
+                >
+                  ✕
+                </button>
               </div>
-            </SheetHeader>
+            </div>
 
-            <nav className="relative z-10 flex flex-col gap-2 px-3 py-4 flex-1">
+            <div className="relative z-10 flex flex-col gap-2 px-3 py-4 flex-1">
               {navigations.map((nav) => (
-                <SheetClose asChild key={nav.href}>
-                  <Link
-                    href={nav.href}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium backdrop-blur-sm border transition-all duration-200 ${
-                      pathname === nav.href
-                        ? "bg-red-600/30 border-red-500/40 text-white"
-                        : "bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white hover:border-white/20"
+                <Link
+                  key={nav.href}
+                  href={nav.href}
+                  onClick={() => setOpen(false)}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium backdrop-blur-sm border transition-all duration-200 ${
+                    pathname === nav.href
+                      ? "bg-red-600/30 border-red-500/40 text-white"
+                      : "bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white hover:border-white/20"
+                  }`}
+                >
+                  <span
+                    className={`w-1.5 h-1.5 rounded-full shrink-0 ${
+                      pathname === nav.href ? "bg-red-400" : "bg-white/30"
                     }`}
-                  >
-                    <span
-                      className={`w-1.5 h-1.5 rounded-full shrink-0 ${
-                        pathname === nav.href ? "bg-red-400" : "bg-white/30"
-                      }`}
-                    />
-                    {nav.name}
-                  </Link>
-                </SheetClose>
+                  />
+                  {nav.name}
+                </Link>
               ))}
-            </nav>
+            </div>
 
             <div className="relative z-10 px-6 py-5 border-t border-white/10">
               <a
@@ -171,33 +195,18 @@ export default function MobileNavbar() {
                   <Phone size={15} className="text-red-400" />
                 </div>
                 <div>
-                  <p className="text-xs text-white/40 leading-none mb-0.5">Bizi Arayın</p>
-                  <p className="text-sm font-medium text-white/80">0312 395 38 83</p>
+                  <p className="text-xs text-white/40 leading-none mb-0.5">
+                    Bizi Arayın
+                  </p>
+                  <p className="text-sm font-medium text-white/80">
+                    0312 395 38 83
+                  </p>
                 </div>
               </a>
             </div>
-          </SheetContent>
-        </Sheet>
-
-        {/* Orta: WhatsApp yükseltilmiş */}
-        <div className="absolute left-1/2 -translate-x-1/2 -top-6">
-          <div className="relative w-14 h-14">
-            <span
-              className="absolute inset-0 rounded-full animate-ping"
-              style={{ backgroundColor: "#25D36640" }}
-            />
-            <Link
-              href="https://wa.me/905448092050"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative z-10 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-xl border-2 border-white/20 hover:scale-105 transition-transform duration-200"
-              style={{ backgroundColor: "#25D366" }}
-            >
-              <WhatsAppIcon />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </nav>
+          </aside>
+        </>
+      )}
+    </>
   );
 }
