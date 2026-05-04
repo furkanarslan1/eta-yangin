@@ -57,7 +57,7 @@ export default function Banner2() {
             Profesyonel <span className="text-red-400">Söndürme</span> ve{" "}
             Koruma Çözümleri
           </h2>
-          <p className="text-neutral-400 text-base mb-8 max-w-lg">
+          <p className="text-neutral-300 text-base mb-8 max-w-lg">
             Binalara, tesislere ve sanayi alanlarına özel yangın söndürme
             sistemleri tasarlıyor, kurulum ve periyodik bakımını yapıyoruz.
           </p>
@@ -72,7 +72,7 @@ export default function Banner2() {
                 <p className="text-sm font-semibold text-white group-hover:text-red-400 transition-colors mb-1">
                   {s.title}
                 </p>
-                <p className="text-xs text-neutral-500 leading-relaxed">
+                <p className="text-xs text-neutral-300 leading-relaxed">
                   {s.description}
                 </p>
               </Link>
@@ -83,8 +83,8 @@ export default function Banner2() {
         {/* Sağ: Resim + kırmızı arka plan aksanı */}
         <div className="flex-1 flex justify-center md:justify-end w-full">
           <div className="relative w-full max-w-lg">
-            <div className="absolute -bottom-5 -left-5 w-4/5 h-4/5 bg-red-600 rounded-2xl" />
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="absolute -bottom-5 -left-5 w-4/5 h-4/5 bg-red-600 rounded-lg" />
+            <div className="relative rounded-lg overflow-hidden shadow-2xl">
               <Image
                 src="/optimized/banners/og-image-900.webp"
                 alt="ETA Yangın - Ankara yangın söndürme sistemleri ve güvenlik ekipmanları"

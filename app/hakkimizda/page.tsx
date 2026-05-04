@@ -48,7 +48,7 @@ export default function HakkimizdaPage() {
       <div className="mx-auto max-w-5xl px-6 py-14">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-red-500 transition-colors mb-12"
+          className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-red-500 transition-colors mb-12"
         >
           <ArrowLeft size={16} />
           Anasayfaya Dön
@@ -61,7 +61,7 @@ export default function HakkimizdaPage() {
             <h2 className="text-2xl font-bold text-gray-900">Hakkımızda</h2>
           </div>
 
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
+          <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-8">
             <p className="text-gray-600 leading-relaxed mb-8">
               Yaptığımız çalışmalarda müşteri memnuniyetini her şeyden üstün
               tutmayı, teknolojik gelişmeyi yakından takip ederek sürekli
@@ -94,7 +94,7 @@ export default function HakkimizdaPage() {
                 <p className="text-sm font-semibold text-gray-900">
                   Genel Müdür
                 </p>
-                <p className="text-xs text-gray-400">ETA Yangın</p>
+                <p className="text-xs text-gray-500">ETA Yangın</p>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@ export default function HakkimizdaPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Metin kartı */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
+            <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-8">
               <p className="text-gray-600 leading-relaxed mb-6">
                 <span className="font-semibold text-gray-800">
                   ISO 9001:2015 Kalite Yönetim Sistemi
@@ -141,14 +141,14 @@ export default function HakkimizdaPage() {
                   <p className="text-sm font-semibold text-gray-900">
                     Genel Müdür
                   </p>
-                  <p className="text-xs text-gray-400">ETA Yangın</p>
+                  <p className="text-xs text-gray-500">ETA Yangın</p>
                 </div>
               </div>
             </div>
 
             {/* ISO sertifika resmi */}
             <div className="flex flex-col items-center gap-4">
-              <div className="relative w-full max-w-sm rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+              <div className="relative w-full max-w-sm rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                 <Image
                   src="/iso.webp"
                   alt="ISO 9001:2015 Sertifikası"
@@ -158,7 +158,7 @@ export default function HakkimizdaPage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <p className="text-xs text-gray-400 text-center">
+              <p className="text-xs text-gray-500 text-center">
                 ISO 9001:2015 Kalite Yönetim Sistemi Belgesi
               </p>
             </div>

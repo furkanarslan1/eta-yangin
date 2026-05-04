@@ -40,7 +40,7 @@ export default function UrunlerimizPage() {
             <Link
               key={product.href}
               href={product.href}
-              className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:border-red-400/60 hover:-translate-y-1 hover:shadow-md"
+              className="group relative overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:border-red-400/60 hover:-translate-y-1 hover:shadow-md"
             >
               <div className="relative h-48 w-full overflow-hidden bg-neutral-100">
                 {product.categoryImage ? (
@@ -53,7 +53,7 @@ export default function UrunlerimizPage() {
                   />
                 ) : (
                   <div className="flex h-full items-center justify-center">
-                    <span className="text-xs text-neutral-400">
+                    <span className="text-xs text-neutral-600">
                       Resim yakında
                     </span>
                   </div>

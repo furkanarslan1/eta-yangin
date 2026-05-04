@@ -5,14 +5,13 @@ import { products } from "@/lib/constants/products";
 
 export default function ProductList() {
   return (
-    <section className="relative w-full py-20 px-6 bg-neutral-900 overflow-hidden">
-      <div className="absolute top-10 left-10 w-80 h-80 rounded-full bg-red-800/40 blur-3xl animate-blob-1 pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-red-900/35 blur-3xl animate-blob-2 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-red-700/30 blur-3xl animate-blob-3 pointer-events-none" />
+    <section className="relative w-full py-20 px-6 bg-gray-50 overflow-hidden">
+      <div className="absolute top-10 left-10 w-80 h-80 rounded-full bg-red-100/70 blur-3xl animate-blob-1 pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-red-200/50 blur-3xl animate-blob-2 pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
             Ürün Kategorilerimiz
           </h2>
         </div>
@@ -22,10 +21,10 @@ export default function ProductList() {
             <Link
               key={product.href}
               href={product.href}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:border-red-400/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-red-900/30"
+              className="group relative overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:border-red-300 hover:-translate-y-1 hover:shadow-md"
             >
               {/* Resim alanı */}
-              <div className="relative h-44 w-full overflow-hidden bg-neutral-800">
+              <div className="relative h-44 w-full overflow-hidden bg-neutral-100">
                 {product.categoryImage ? (
                   <Image
                     src={product.categoryImage}
@@ -36,20 +35,20 @@ export default function ProductList() {
                   />
                 ) : (
                   <div className="flex h-full items-center justify-center">
-                    <span className="text-xs text-neutral-500">Resim yakında</span>
+                    <span className="text-xs text-neutral-600">Resim yakında</span>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/35 to-transparent" />
               </div>
 
               {/* Başlık alanı */}
               <div className="flex items-center justify-between gap-3 px-4 py-3">
-                <span className="text-sm font-semibold text-white/90 group-hover:text-red-400 transition-colors duration-300">
+                <span className="text-sm font-semibold text-neutral-800 group-hover:text-red-600 transition-colors duration-300">
                   {product.title}
                 </span>
                 <ArrowRight
                   size={16}
-                  className="shrink-0 text-red-400 -translate-x-1 transition-all duration-300 group-hover:translate-x-0"
+                  className="shrink-0 text-red-500 -translate-x-1 transition-all duration-300 group-hover:translate-x-0"
                 />
               </div>
             </Link>

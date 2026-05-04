@@ -54,7 +54,7 @@ export default async function KategoriPage({ params }: Props) {
       <div className="mx-auto max-w-6xl px-6 py-20">
         <Link
           href="/urunlerimiz/"
-          className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-red-500 transition-colors mb-10"
+          className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-red-500 transition-colors mb-10"
         >
           <ArrowLeft size={16} />
           Kategorilere Dön
@@ -65,7 +65,7 @@ export default async function KategoriPage({ params }: Props) {
         </h1>
 
         {category.items.length === 0 ? (
-          <p className="text-gray-400">
+          <p className="text-gray-600">
             Bu kategori için ürünler yakında eklenecek.
           </p>
         ) : (
@@ -73,7 +73,7 @@ export default async function KategoriPage({ params }: Props) {
             {category.items.map((item, index) => (
               <div
                 key={`${item.title}-${index}`}
-                className="group flex flex-col rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                className="group flex flex-col rounded-lg border border-gray-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
               >
                 <div className="relative h-52 w-full bg-gray-50">
                   <Image

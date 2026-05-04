@@ -55,7 +55,7 @@ export default function IletisimPage() {
       <div className="mx-auto max-w-5xl px-6 py-14">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-red-500 transition-colors mb-12"
+          className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-red-500 transition-colors mb-12"
         >
           <ArrowLeft size={16} />
           Anasayfaya Dön
@@ -81,16 +81,16 @@ export default function IletisimPage() {
                   href={href}
                   target={label === "Adres" ? "_blank" : undefined}
                   rel={label === "Adres" ? "noopener noreferrer" : undefined}
-                  className="group flex items-start gap-4 bg-white rounded-2xl border border-gray-100 shadow-sm p-5 hover:border-red-200 hover:shadow-md transition-all duration-300"
+                  className="group flex items-start gap-4 bg-white rounded-lg border border-gray-200 shadow-sm p-5 hover:border-red-200 hover:shadow-md transition-all duration-300"
                 >
-                  <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-red-600 shrink-0 group-hover:bg-red-600 transition-colors duration-300">
+                  <div className="flex items-center justify-center w-11 h-11 rounded-lg bg-red-600 shrink-0 group-hover:bg-red-600 transition-colors duration-300">
                     <Icon
                       size={20}
                       className="text-white transition-colors duration-300"
                     />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">
+                    <p className="text-xs font-semibold text-gray-600 uppercase tracking-widest mb-1">
                       {label}
                     </p>
                     <p className="text-sm font-medium text-gray-800 leading-snug">
@@ -109,7 +109,7 @@ export default function IletisimPage() {
               <h2 className="text-2xl font-bold text-gray-900">Konumumuz</h2>
             </div>
 
-            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm w-full h-80 md:h-96">
+            <div className="rounded-lg overflow-hidden border border-gray-200 shadow-sm w-full h-80 md:h-96">
               <iframe
                 title="ETA Yangın Konum"
                 width="100%"

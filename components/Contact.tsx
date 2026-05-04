@@ -26,19 +26,19 @@ const contactItems = [
 
 export default function Contact() {
   return (
-    <section className="relative w-full bg-neutral-900 py-20 px-6 overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-red-900/20 blur-3xl animate-blob-1 pointer-events-none" />
-      <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-red-800/15 blur-3xl animate-blob-2 pointer-events-none" />
+    <section className="relative w-full bg-white py-20 px-6 overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-red-100/70 blur-3xl animate-blob-1 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-neutral-100 blur-3xl animate-blob-2 pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <p className="text-red-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Bize Ulaşın
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             İletişim
           </h2>
-          <p className="text-neutral-400 mt-3 max-w-md mx-auto text-sm">
+          <p className="text-gray-600 mt-3 max-w-md mx-auto text-sm">
             Yangın güvenliği ürün ve hizmetleri hakkında bilgi almak için
             hemen iletişime geçin.
           </p>
@@ -53,16 +53,16 @@ export default function Contact() {
                 href={href}
                 target={external ? "_blank" : undefined}
                 rel={external ? "noopener noreferrer" : undefined}
-                className="group flex items-start gap-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-red-500/30 rounded-2xl p-5 transition-all duration-300"
+                className="group flex items-start gap-4 bg-gray-50 hover:bg-white border border-gray-200 hover:border-red-200 rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300"
               >
-                <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-red-600/20 border border-red-500/30 shrink-0 group-hover:bg-red-600 transition-colors duration-300">
-                  <Icon size={20} className="text-red-400 group-hover:text-white transition-colors duration-300" />
+                <div className="flex items-center justify-center w-11 h-11 rounded-lg bg-red-600 shrink-0 transition-colors duration-300">
+                  <Icon size={20} className="text-white transition-colors duration-300" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-neutral-500 uppercase tracking-widest mb-1">
+                  <p className="text-xs font-semibold text-gray-600 uppercase tracking-widest mb-1">
                     {label}
                   </p>
-                  <p className="text-sm font-medium text-white/80 leading-snug">
+                  <p className="text-sm font-medium text-gray-900 leading-snug">
                     {value}
                   </p>
                 </div>
@@ -71,7 +71,7 @@ export default function Contact() {
           </div>
 
           {/* Harita */}
-          <div className="rounded-2xl overflow-hidden border border-white/10 w-full h-72 md:h-full min-h-64">
+          <div className="rounded-lg overflow-hidden border border-gray-200 shadow-sm w-full h-72 md:h-full min-h-64">
             <iframe
               title="ETA Yangın Konum"
               width="100%"

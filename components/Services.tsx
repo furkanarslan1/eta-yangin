@@ -23,7 +23,7 @@ export default function Services() {
             return (
               <div
                 key={service.title}
-                className="group flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md p-6 hover:border-red-400/50 hover:bg-white/15 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="group flex flex-col gap-4 rounded-lg border border-white/15 bg-white/10 backdrop-blur-md p-6 hover:border-red-400/50 hover:bg-white/15 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="flex flex-col gap-2 items-center text-center">
                   <h3 className="text-base font-semibold text-white leading-snug transition-colors duration-300">

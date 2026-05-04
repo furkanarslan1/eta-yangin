@@ -37,7 +37,7 @@ export default function ReferanslarimizPage() {
       <div className="mx-auto max-w-6xl px-6 py-14">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-red-500 transition-colors mb-10"
+          className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-red-500 transition-colors mb-10"
         >
           <ArrowLeft size={16} />
           Anasayfaya Dön
@@ -54,7 +54,7 @@ export default function ReferanslarimizPage() {
           {references.map((n) => (
             <div
               key={n}
-              className="flex items-center justify-center bg-white rounded-2xl border border-gray-100 shadow-sm p-4 hover:shadow-md hover:border-red-100 transition-all duration-300"
+              className="flex items-center justify-center bg-white rounded-lg border border-gray-200 shadow-sm p-4 hover:shadow-md hover:border-red-100 transition-all duration-300"
             >
               <div className="relative w-full h-20">
                 <Image
@@ -69,7 +69,7 @@ export default function ReferanslarimizPage() {
           ))}
         </div>
 
-        <p className="text-center text-gray-400 text-sm mt-12">
+        <p className="text-center text-gray-600 text-sm mt-12">
           {references.length} kuruma yangın güvenliği hizmeti sunduk.
         </p>
       </div>

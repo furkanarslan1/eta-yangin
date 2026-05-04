@@ -44,7 +44,7 @@ function NavBtn({
           {children}
         </span>
       </div>
-      <span className={`text-[9px] text-white/60 transition-colors ${iconColor}`}>
+      <span className={`text-[9px] text-white/75 transition-colors ${iconColor}`}>
         {label}
       </span>
     </Link>
@@ -109,7 +109,7 @@ export default function MobileNavbar() {
             <div className="flex items-center justify-center w-9 h-9 rounded-full bg-white/5 border border-white/10 transition-all duration-200 group-hover:bg-white/15 group-hover:border-white/30">
               <Menu size={16} className="text-white" />
             </div>
-            <span className="text-[9px] text-white/60">Menü</span>
+            <span className="text-[9px] text-white/75">Menü</span>
           </button>
 
           {/* Orta: WhatsApp yükseltilmiş */}
@@ -157,7 +157,7 @@ export default function MobileNavbar() {
                   type="button"
                   aria-label="Kapat"
                   onClick={() => setOpen(false)}
-                  className="text-white/60 hover:text-white transition-colors w-8 h-8 flex items-center justify-center rounded-md hover:bg-white/10"
+                  className="text-white/75 hover:text-white transition-colors w-8 h-8 flex items-center justify-center rounded-md hover:bg-white/10"
                 >
                   ✕
                 </button>
@@ -173,7 +173,7 @@ export default function MobileNavbar() {
                   className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium backdrop-blur-sm border transition-all duration-200 ${
                     pathname === nav.href
                       ? "bg-red-600/30 border-red-500/40 text-white"
-                      : "bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white hover:border-white/20"
+                      : "bg-white/5 border-white/10 text-white/80 hover:bg-white/10 hover:text-white hover:border-white/20"
                   }`}
                 >
                   <span
@@ -189,13 +189,13 @@ export default function MobileNavbar() {
             <div className="relative z-10 px-6 py-5 border-t border-white/10">
               <a
                 href="tel:+903123953383"
-                className="flex items-center gap-3 text-white/60 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
               >
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-red-600/20 border border-red-500/30">
                   <Phone size={15} className="text-red-400" />
                 </div>
                 <div>
-                  <p className="text-xs text-white/40 leading-none mb-0.5">
+                  <p className="text-xs text-white/60 leading-none mb-0.5">
                     Bizi Arayın
                   </p>
                   <p className="text-sm font-medium text-white/80">

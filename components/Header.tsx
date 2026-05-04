@@ -76,7 +76,7 @@ export default function Header() {
 
       {/* Desktop: İletişim */}
       <div
-        className={`hidden md:flex items-center gap-3 px-4 py-2 rounded-2xl transition-colors duration-300 ${
+        className={`hidden md:flex items-center gap-3 px-4 py-2 rounded-lg transition-colors duration-300 ${
           scrolled ? "bg-white text-red-600" : "bg-white text-red-600"
         }`}
       >
