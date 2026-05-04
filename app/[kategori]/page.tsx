@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props) {
   if (!product) return {};
 
   const BASE = "https://www.etayangin.com.tr";
-  const url = `${BASE}${product.href}/`;
+  const url = new URL(product.href, BASE).toString();
   const itemCount = product.items.length;
   const description = `ETA Yangın ${product.title} ürünleri — ${
     itemCount > 0

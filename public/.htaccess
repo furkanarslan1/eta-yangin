@@ -1,18 +1,34 @@
 Options -Indexes
 RewriteEngine On
 
-# HTTPS zorlaması
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# Eski .html URL'lerini yeni statik rota yapısına tek adımda taşı.
+RewriteRule ^index\.html$ https://www.etayangin.com.tr/ [R=301,L,NE]
+RewriteRule ^hakkimizda\.html$ https://www.etayangin.com.tr/hakkimizda/ [R=301,L,NE]
+RewriteRule ^urunlerimiz\.html$ https://www.etayangin.com.tr/urunlerimiz/ [R=301,L,NE]
+RewriteRule ^referanslar\.html$ https://www.etayangin.com.tr/referanslarimiz/ [R=301,L,NE]
+RewriteRule ^referanslarimiz\.html$ https://www.etayangin.com.tr/referanslarimiz/ [R=301,L,NE]
+RewriteRule ^iletisim\.html$ https://www.etayangin.com.tr/iletisim/ [R=301,L,NE]
+RewriteRule ^yangin-sondurme-cihazlari\.html$ https://www.etayangin.com.tr/yangin-sondurme-cihazlari/ [R=301,L,NE]
+RewriteRule ^yangin-sondurme-sistemleri\.html$ https://www.etayangin.com.tr/yangin-sondurme-sistemleri/ [R=301,L,NE]
+RewriteRule ^yangin-dolaplari-ve-hidrantlari\.html$ https://www.etayangin.com.tr/yangin-dolaplari-ve-hidrantlari/ [R=301,L,NE]
+RewriteRule ^yangin-dolaplari-ve-hidrantlar\.html$ https://www.etayangin.com.tr/yangin-dolaplari-ve-hidrantlari/ [R=301,L,NE]
+RewriteRule ^yangin-algilama-ve-ihbar-sistemleri\.html$ https://www.etayangin.com.tr/yangin-algilama-ihbar-sistemleri/ [R=301,L,NE]
+RewriteRule ^yangin-algilama-ihbar-sistemleri\.html$ https://www.etayangin.com.tr/yangin-algilama-ihbar-sistemleri/ [R=301,L,NE]
+RewriteRule ^itfaiye-malzemeleri\.html$ https://www.etayangin.com.tr/itfaiye-malzemeleri/ [R=301,L,NE]
+RewriteRule ^arama-ve-kurtarma-malzemeleri\.html$ https://www.etayangin.com.tr/arama-kurtarma-malzemeleri/ [R=301,L,NE]
+RewriteRule ^arama-kurtarma-malzemeleri\.html$ https://www.etayangin.com.tr/arama-kurtarma-malzemeleri/ [R=301,L,NE]
+RewriteRule ^yangin-kapisi-ve-merdivenleri\.html$ https://www.etayangin.com.tr/yangin-kapisi-ve-merdivenleri/ [R=301,L,NE]
+RewriteRule ^acil-aydinlatma-ve-yonlendirme\.html$ https://www.etayangin.com.tr/acil-aydinlatma-yonlendirme/ [R=301,L,NE]
+RewriteRule ^acil-aydinlatma-yonlendirme\.html$ https://www.etayangin.com.tr/acil-aydinlatma-yonlendirme/ [R=301,L,NE]
+RewriteRule ^is-guvenligi\.html$ https://www.etayangin.com.tr/is-guvenligi/ [R=301,L,NE]
 
-# www → www.etayangin.com.tr (www olmayanları www'ya yönlendir)
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# Kalan eski .html sayfaları aynı slug varsa temiz URL'ye taşınır.
+RewriteRule ^(.+)\.html$ https://www.etayangin.com.tr/$1/ [R=301,L,NE]
 
-# Eski .html URL'lerini temiz URL'lere 301 yönlendir (SEO kaybı olmadan)
-# Örn: /hakkimizda.html → /hakkimizda/
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
-RewriteRule ^ /%1/ [R=301,L,NE]
+# Tek canonical host: HTTPS + www.etayangin.com.tr
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.etayangin\.com\.tr$ [NC]
+RewriteRule ^(.*)$ https://www.etayangin.com.tr/$1 [R=301,L,NE]
 
 # 404 sayfası
 ErrorDocument 404 /404.html

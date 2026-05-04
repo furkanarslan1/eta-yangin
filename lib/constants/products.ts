@@ -92,7 +92,32 @@ export const products: ProductCategory[] = [
     href: "/yangin-sondurme-sistemleri/",
     image: "/services/proje-1.webp",
     categoryImage: "/optimized/categories/yangin-sondurme-sis.webp",
-    items: [],
+    items: [
+      {
+        title: "FM200 Gazlı Söndürme Sistemleri",
+        image: "/services/fm-200-yangin-sondurme.webp",
+      },
+      {
+        title: "Davlumbaz Söndürme Sistemleri",
+        image: "/optimized/hero/davlumbaz-hero.webp",
+      },
+      {
+        title: "Sulu Söndürme Sistemleri",
+        image: "/services/proje-1.webp",
+      },
+      {
+        title: "Karbondioksit Söndürme Sistemleri",
+        image: "/optimized/categories/yangin-sondurme-sis.webp",
+      },
+      {
+        title: "Tozlu Söndürme Sistemleri",
+        image: "/optimized/hero/eta-gaz-hero.webp",
+      },
+      {
+        title: "Mikro Söndürme Sistemleri",
+        image: "/optimized/hero/itfaiye-hero.webp",
+      },
+    ],
   },
   {
     title: "Yangın Dolapları ve Hidrantları",

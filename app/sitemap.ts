@@ -4,11 +4,12 @@ import { products } from "@/lib/constants/products";
 export const dynamic = "force-static";
 
 const BASE_URL = "https://www.etayangin.com.tr";
+const absoluteUrl = (path: string) => new URL(path, BASE_URL).toString();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
-      url: BASE_URL,
+      url: absoluteUrl("/"),
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
@@ -40,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const productRoutes: MetadataRoute.Sitemap = products.map((p) => ({
-    url: `${BASE_URL}${p.href}/`,
+    url: absoluteUrl(p.href),
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.8,
