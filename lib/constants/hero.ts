@@ -4,7 +4,7 @@ export const heroSlides = [
     alt: "Gaz Söndürme Sistemleri",
     title: "Gazlı Yangın Söndürme",
     description:
-      "Tüm. Türkiye'de  FM200 gazlı yangın söndürme sistemleri için projelendirme, kurulum ve bakım hizmeti sunuyoruz.",
+      "Türkiye genelinde FM200 gazlı yangın söndürme sistemleri için projelendirme, kurulum ve bakım hizmeti sunuyoruz.",
   },
   {
     image: "/optimized/hero/itfaiye-hero.webp",

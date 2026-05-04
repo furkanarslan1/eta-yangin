@@ -44,7 +44,7 @@ export default function Banner() {
         <div className="flex-1 flex justify-center md:justify-end">
           <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-115 lg:h-115 animate-float">
             <Image
-              src="/yangin-no-bg.webp"
+              src="/optimized/banners/yangin-no-bg-640.webp"
               alt="Yangın söndürme tüpü ve güvenlik ekipmanları"
               fill
               sizes="(max-width: 768px) 288px, (max-width: 1024px) 384px, 460px"
