@@ -42,13 +42,13 @@ export default function ProductList() {
               </div>
 
               {/* Başlık alanı */}
-              <div className="flex items-center justify-between gap-3 px-4 py-3">
-                <span className="text-sm font-semibold text-neutral-800 group-hover:text-red-600 transition-colors duration-300">
+              <div className="flex items-center justify-between gap-3 bg-red-600 px-4 py-3 transition-colors duration-300 group-hover:bg-red-700">
+                <span className="text-sm font-semibold text-white">
                   {product.title}
                 </span>
                 <ArrowRight
                   size={16}
-                  className="shrink-0 text-red-500 -translate-x-1 transition-all duration-300 group-hover:translate-x-0"
+                  className="shrink-0 -translate-x-1 text-white transition-transform duration-300 group-hover:translate-x-0"
                 />
               </div>
             </Link>

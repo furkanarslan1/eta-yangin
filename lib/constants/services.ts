@@ -1,4 +1,5 @@
 import {
+  DraftingCompass,
   Flame,
   ShieldCheck,
   Package,
@@ -13,6 +14,12 @@ import {
 } from "lucide-react";
 
 export const services = [
+  {
+    title: "Projelendirme",
+    description:
+      "Yapınıza uygun yangın güvenliği çözümlerini standartlara göre projelendiriyor, uygulama öncesi teknik planlamayı hazırlıyoruz.",
+    icon: DraftingCompass,
+  },
   {
     title: "Yangın Söndürme Cihazları",
     description:

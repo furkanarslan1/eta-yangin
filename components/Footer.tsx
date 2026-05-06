@@ -27,7 +27,7 @@ export default function Footer() {
       {/* Ana içerik */}
       <div className="mx-auto max-w-7xl px-6 py-14 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
         {/* Marka */}
-        <div className="flex flex-col gap-4 lg:col-span-2">
+        <div className="flex flex-col items-center gap-4 text-center sm:items-start sm:text-left lg:col-span-2">
           <Link href="/" className="flex items-center gap-2 w-fit">
             <Image
               src="/logo.png"
@@ -60,11 +60,11 @@ export default function Footer() {
         </div>
 
         {/* Hızlı linkler */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col items-center gap-4 text-center sm:items-start sm:text-left">
           <h3 className="text-sm font-semibold text-white uppercase tracking-widest">
             Sayfalar
           </h3>
-          <ul className="flex flex-col gap-2.5">
+          <ul className="flex flex-col items-center gap-2.5 sm:items-start">
             {navigations.map((nav) => (
               <li key={nav.href}>
                 <Link
@@ -79,21 +79,21 @@ export default function Footer() {
         </div>
 
         {/* İletişim */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col items-center gap-4 text-center sm:items-start sm:text-left">
           <h3 className="text-sm font-semibold text-white uppercase tracking-widest">
             İletişim
           </h3>
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col items-center gap-4 sm:items-start">
             {contactItems.map(({ icon: Icon, value, href }) => (
               <li key={value}>
                 <a
                   href={href}
                   target={href.startsWith("https") ? "_blank" : undefined}
                   rel={href.startsWith("https") ? "noopener noreferrer" : undefined}
-                  className="group flex items-start gap-3 text-sm text-white/70 hover:text-red-300 transition-colors duration-200"
+                  className="group block max-w-[18rem] text-center text-sm text-white/70 transition-colors duration-200 hover:text-red-300 sm:max-w-none sm:text-left"
                 >
-                  <Icon size={15} className="shrink-0 mt-0.5 text-red-400 group-hover:text-red-300 transition-colors" />
-                  {value}
+                  <Icon size={15} className="mr-1.5 inline-block align-[-2px] text-red-400 transition-colors group-hover:text-red-300" />
+                  <span className="leading-relaxed">{value}</span>
                 </a>
               </li>
             ))}

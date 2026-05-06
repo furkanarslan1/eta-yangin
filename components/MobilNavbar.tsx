@@ -20,31 +20,27 @@ function NavBtn({
   label,
   external,
   children,
-  hoverColor = "group-hover:bg-green-500/20 group-hover:border-green-400/40",
-  iconColor = "group-hover:text-green-300",
 }: {
   href: string;
   label: string;
   external?: boolean;
   children: React.ReactNode;
-  hoverColor?: string;
-  iconColor?: string;
 }) {
   return (
     <Link
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="flex flex-col items-center gap-0.5 group"
+      className="relative z-10 flex flex-col items-center gap-0.5 group"
     >
       <div
-        className={`flex items-center justify-center w-9 h-9 rounded-full bg-white/5 border border-white/10 transition-all duration-200 ${hoverColor}`}
+        className="flex items-center justify-center w-9 h-9 rounded-full bg-white border border-white shadow-sm transition-transform duration-200 group-hover:scale-105"
       >
-        <span className={`text-white transition-colors ${iconColor}`}>
+        <span className="text-red-600">
           {children}
         </span>
       </div>
-      <span className={`text-[9px] text-white/75 transition-colors ${iconColor}`}>
+      <span className="text-[9px] text-white">
         {label}
       </span>
     </Link>
@@ -60,7 +56,7 @@ export default function MobileNavbar() {
       <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:hidden w-88">
         <div className="relative flex items-center justify-between h-16 px-5 rounded-full bg-linear-to-br from-neutral-900 via-red-950/80 to-neutral-900 border border-red-800/30 shadow-2xl shadow-red-950/50">
           {/* Blob'lar kendi overflow-hidden kutusunda */}
-          <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 z-0 rounded-full overflow-hidden pointer-events-none">
             <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full bg-red-600/70 blur-2xl animate-blob-1" />
             <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-red-900/80 blur-2xl animate-blob-2" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-red-700/60 blur-2xl animate-blob-3" />
@@ -69,8 +65,6 @@ export default function MobileNavbar() {
           <NavBtn
             href="mailto:info@etayangin.com.tr"
             label="Mail"
-            hoverColor="group-hover:bg-blue-500/20 group-hover:border-blue-400/40"
-            iconColor="group-hover:text-blue-300"
           >
             <Mail size={16} />
           </NavBtn>
@@ -80,21 +74,17 @@ export default function MobileNavbar() {
             href="https://maps.google.com/?q=ETA+Yangın+Ankara"
             label="Konum"
             external
-            hoverColor="group-hover:bg-orange-500/20 group-hover:border-orange-400/40"
-            iconColor="group-hover:text-orange-300"
           >
             <MapPin size={16} />
           </NavBtn>
 
           {/* Orta boşluk */}
-          <div className="w-14" />
+          <div className="relative z-10 w-14" />
 
           {/* Telefon */}
           <NavBtn
             href="tel:+903123953383"
             label="Ara"
-            hoverColor="group-hover:bg-red-500/20 group-hover:border-red-400/40"
-            iconColor="group-hover:text-red-300"
           >
             <Phone size={16} />
           </NavBtn>
@@ -104,12 +94,12 @@ export default function MobileNavbar() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((value) => !value)}
-            className="flex flex-col items-center gap-0.5 group"
+            className="relative z-10 flex flex-col items-center gap-0.5 group"
           >
-            <div className="flex items-center justify-center w-9 h-9 rounded-full bg-white/5 border border-white/10 transition-all duration-200 group-hover:bg-white/15 group-hover:border-white/30">
-              <Menu size={16} className="text-white" />
+            <div className="flex items-center justify-center w-9 h-9 rounded-full bg-white border border-white shadow-sm transition-transform duration-200 group-hover:scale-105">
+              <Menu size={16} className="text-red-600" />
             </div>
-            <span className="text-[9px] text-white/75">Menü</span>
+            <span className="text-[9px] text-white">Menü</span>
           </button>
 
           {/* Orta: WhatsApp yükseltilmiş */}
