@@ -77,7 +77,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-[76vw] min-h-[270px] max-h-[390px] w-full overflow-hidden md:h-screen md:min-h-0 md:max-h-none"
+      className="relative h-[82svh] w-full overflow-hidden md:h-screen"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -89,7 +89,7 @@ export default function Hero() {
             alt=""
             fill
             sizes="100vw"
-            className="object-contain scale-[1.46] md:scale-100 md:object-cover animate-hero-media-exit"
+            className="object-cover animate-hero-media-exit"
             aria-hidden="true"
             loading="eager"
           />
@@ -100,7 +100,7 @@ export default function Hero() {
           alt={slide.alt}
           fill
           sizes="100vw"
-          className="object-contain scale-[1.46] md:scale-100 md:object-cover animate-hero-media"
+          className="object-cover animate-hero-media"
           loading="eager"
           fetchPriority={current === 0 ? "high" : "auto"}
         />
@@ -110,11 +110,11 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/50" />
 
       {/* İçerik */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 pt-16 pb-8 text-center text-white md:pt-0 md:pb-0">
-        <h1 className="mb-2 max-w-3xl text-xl font-bold leading-tight transition-all duration-700 md:mb-4 md:text-6xl animate-hero-title">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 pb-24 text-center text-white md:pb-0">
+        <h1 className="mb-4 max-w-3xl text-2xl font-bold leading-tight transition-all duration-700 md:text-6xl animate-hero-title">
           {slide.title}
         </h1>
-        <p className="max-w-xs text-xs leading-relaxed text-gray-200 transition-all duration-700 md:max-w-xl md:text-xl animate-hero-description">
+        <p className="max-w-xl text-sm text-gray-200 transition-all duration-700 md:text-xl animate-hero-description">
           {slide.description}
         </p>
       </div>
@@ -136,7 +136,7 @@ export default function Hero() {
       </button>
 
       {/* Slide göstergeleri */}
-      <div className="absolute bottom-3 md:bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center gap-3">
+      <div className="absolute bottom-16 md:bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center gap-3">
         {heroSlides.map((_, index) => (
           <button
             key={index}
