@@ -27,6 +27,12 @@ const systems = [
     href: "/yangin-sondurme-sistemleri/",
   },
   {
+    title: "Oda Sızdırmazlık Testi",
+    description:
+      "Gazlı söndürme yapılan mahallerde gazın yeterli süre korunmasını doğrulayan test hizmeti.",
+    href: "/oda-sizdirmazlik-testi/",
+  },
+  {
     title: "Yangın Dolabı & Hidrant",
     description:
       "TS EN 671 standartlarında yangın dolapları, yeraltı ve yerüstü hidrant sistemleri.",

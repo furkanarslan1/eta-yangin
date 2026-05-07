@@ -1,6 +1,7 @@
 export const productCategoryHrefs = [
   "/yangin-sondurme-cihazlari/",
   "/yangin-sondurme-sistemleri/",
+  "/oda-sizdirmazlik-testi/",
   "/yangin-dolaplari-ve-hidrantlari/",
   "/yangin-algilama-ihbar-sistemleri/",
   "/is-guvenligi/",

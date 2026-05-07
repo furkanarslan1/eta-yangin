@@ -1,6 +1,7 @@
 export type ProductItem = {
   title: string;
   image: string;
+  description?: string;
 };
 
 export type ProductCategory = {
@@ -116,6 +117,32 @@ export const products: ProductCategory[] = [
       {
         title: "Mikro Söndürme Sistemleri",
         image: "/optimized/hero/itfaiye-hero.webp",
+      },
+    ],
+  },
+  {
+    title: "Oda Sızdırmazlık Testi",
+    href: "/oda-sizdirmazlik-testi/",
+    image: "/optimized/categories/oda-sizdirmazlik.webp",
+    categoryImage: "/optimized/categories/oda-sizdirmazlik.webp",
+    items: [
+      {
+        title: "Room Integrity Test",
+        image: "/products/oda-sizdirmazlik-testi/room-integrity-test.webp",
+        description:
+          "Temiz gazlı söndürme yapılan hacimlerde gazın gerekli süre korunmasını doğrulayan oda bütünlüğü testidir.",
+      },
+      {
+        title: "Oda Sızdırmazlık Testi",
+        image: "/products/oda-sizdirmazlik-testi/oda-sizdirmazlik-testi.webp",
+        description:
+          "Korunan mahalde kaçak noktalarının belirlenmesi ve söndürme performansının güvence altına alınması için uygulanır.",
+      },
+      {
+        title: "Door Fan Oda Sızdırmazlık Testi",
+        image: "/products/oda-sizdirmazlik-testi/door-fan-oda.webp",
+        description:
+          "Door fan ekipmanı ile mahal basınçlandırılarak sızdırmazlık seviyesi ve gaz tutma süresi analiz edilir.",
       },
     ],
   },

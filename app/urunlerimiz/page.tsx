@@ -7,13 +7,13 @@ import { products } from "@/lib/constants/products";
 export const metadata: Metadata = {
   title: "Ürünlerimiz",
   description:
-    "ETA Yangın ürün kategorileri — FM200 gazlı sistemler, yangın tüpleri, dolaplar ve hidrantlar, itfaiye malzemeleri, yangın algılama sistemleri, iş güvenliği ekipmanları ve daha fazlası.",
+    "ETA Yangın ürün kategorileri — FM200 gazlı sistemler, oda sızdırmazlık testi, yangın tüpleri, dolaplar ve hidrantlar, itfaiye malzemeleri, yangın algılama sistemleri, iş güvenliği ekipmanları ve daha fazlası.",
   alternates: { canonical: "https://www.etayangin.com.tr/urunlerimiz/" },
   openGraph: {
     url: "https://www.etayangin.com.tr/urunlerimiz/",
     title: "Ürünlerimiz | ETA Yangın",
     description:
-      "FM200 gazlı sistemler, yangın tüpleri, itfaiye malzemeleri ve iş güvenliği ekipmanları dahil tüm ürün kategorileri.",
+      "FM200 gazlı sistemler, oda sızdırmazlık testi, yangın tüpleri, itfaiye malzemeleri ve iş güvenliği ekipmanları dahil tüm ürün kategorileri.",
   },
 };
 
@@ -28,7 +28,7 @@ export default function UrunlerimizPage() {
             Tüm Kategoriler
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-white">
-            Ürünlerimiz
+            Ürün Kategorilerimiz
           </h1>
         </div>
       </div>
@@ -61,13 +61,13 @@ export default function UrunlerimizPage() {
                 <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
               </div>
 
-              <div className="flex items-center justify-between gap-3 px-4 py-3">
-                <span className="text-sm font-semibold text-neutral-800 group-hover:text-red-600 transition-colors duration-300">
+              <div className="flex h-16 items-center justify-between gap-3 bg-red-600 px-4 transition-colors duration-300 group-hover:bg-red-700">
+                <span className="line-clamp-2 text-sm font-semibold leading-snug text-white">
                   {product.title}
                 </span>
                 <ArrowRight
                   size={16}
-                  className="shrink-0 text-red-500 -translate-x-1 transition-all duration-300 group-hover:translate-x-0"
+                  className="shrink-0 -translate-x-1 text-white transition-all duration-300 group-hover:translate-x-0"
                 />
               </div>
             </Link>

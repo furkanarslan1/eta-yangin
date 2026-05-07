@@ -63,6 +63,12 @@ export const services = [
     icon: Server,
   },
   {
+    title: "Oda Sızdırmazlık Testi",
+    description:
+      "Gazlı söndürme yapılan mahallerde gazın yeterli süre korunmasını oda sızdırmazlık testiyle doğruluyoruz.",
+    icon: ShieldCheck,
+  },
+  {
     title: "Karbondioksit Söndürme Sistemleri",
     description:
       "Yüksek basınçlı CO₂ sistemleriyle elektrik odaları ve endüstriyel alanlarda kalıntısız söndürme yapıyoruz.",

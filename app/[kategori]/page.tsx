@@ -86,9 +86,16 @@ export default async function KategoriPage({ params }: Props) {
                 </div>
 
                 <div className="flex flex-col flex-1 p-4 gap-4">
-                  <p className="text-sm font-semibold text-gray-800 leading-snug flex-1">
-                    {item.title}
-                  </p>
+                  <div className="flex-1">
+                    <p className="text-sm font-semibold text-gray-800 leading-snug">
+                      {item.title}
+                    </p>
+                    {item.description && (
+                      <p className="mt-2 text-xs leading-relaxed text-gray-500">
+                        {item.description}
+                      </p>
+                    )}
+                  </div>
                   <a
                     href={`https://wa.me/905448092050?text=${encodeURIComponent(`Merhaba, "${item.title}" ürünü hakkında teklif almak istiyorum.`)}`}
                     target="_blank"

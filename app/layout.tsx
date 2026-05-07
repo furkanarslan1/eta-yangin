@@ -122,6 +122,7 @@ const jsonLd = {
     itemListElement: [
       "Yangın Söndürme Cihazları",
       "FM200 Gazlı Söndürme Sistemleri",
+      "Oda Sızdırmazlık Testi",
       "Davlumbaz Söndürme Sistemleri",
       "Yangın Dolapları ve Hidrantları",
       "İtfaiye Malzemeleri",
