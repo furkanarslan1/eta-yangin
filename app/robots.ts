@@ -7,6 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: "/cgi-bin",
     },
     sitemap: "https://www.etayangin.com.tr/sitemap.xml",
     host: "https://www.etayangin.com.tr",
